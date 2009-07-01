@@ -5,7 +5,8 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>RAILS_DIR=`dirname "$TM_FILEPATH" | sed -e "s|test/javascript.*$||"`
+	<string>#!/usr/bin/env sh
+RAILS_DIR=`dirname "$TM_FILEPATH" | sed -e "s|test/javascript.*$||"`
 SPEC_NAME=`basename -s "_spec.js" "$TM_FILEPATH"`
 
 cd $RAILS_DIR
